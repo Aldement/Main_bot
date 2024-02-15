@@ -25,4 +25,4 @@ async def on_member_join(self, member):
             to_send = f'Welcome {member.mention} to {guild.name}!'
             await guild.system_channel.send(to_send)
 
-bot.run("ТMTIwNTIwODM4MzQ0Mzk2Mzk1NA.G4VADz.0XnBEAKtw_eKZ8tc8sDio11l5jerPRtyVcCVGY")
+bot.run("")
