@@ -25,4 +25,16 @@ async def on_member_join(self, member):
             to_send = f'Welcome {member.mention} to {guild.name}!'
             await guild.system_channel.send(to_send)
 
+@bot.command()
+async def addrole(ctx,role: discord.role, user: discord.member):
+    if ctx.author.guild_permissions.administrator:
+        await user.add_role(role)
+        await ctx.send(f"Роль выдана! {role.mention} to {user.mention}.")
+
+@bot.command()
+async def removerole(ctx, role: discord.role, user: discord.member):
+    if ctx.author.guild_permissions.administrator:
+        await user.remove_role(role)
+        await ctx.send(f"Роль убрана! {role.mention} to {user.mention}.")
+
 bot.run("")
